@@ -21,12 +21,12 @@ export const viewport: Viewport = {
 
 // Runs before first paint: the saved theme, else the system preference (no light flash in dark mode)
 const THEME_SCRIPT = `(function(){var t=null;try{t=localStorage.getItem("protein-to-particle:theme")}catch(e){}if(t!=="light"&&t!=="dark")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t})()`;
-// Same for the language: a ?lang= link, else the saved choice, else the browser language (Korean or English)
-const LANG_SCRIPT = `(function(){var l=null;try{l=new URLSearchParams(location.search).get("lang")}catch(e){}if(l!=="en"&&l!=="ko"){try{l=localStorage.getItem("protein-to-particle:lang")}catch(e){}}if(l!=="en"&&l!=="ko")l=/^ko\\b/i.test(navigator.language||"")?"ko":"en";document.documentElement.lang=l})()`;
+// Same for the language: a ?lang= link, else the saved choice, else Korean.
+const LANG_SCRIPT = `(function(){var l=null;try{l=new URLSearchParams(location.search).get("lang")}catch(e){}if(l!=="en"&&l!=="ko"){try{l=localStorage.getItem("protein-to-particle:lang")}catch(e){}}if(l!=="en"&&l!=="ko")l="ko";document.documentElement.lang=l})()`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html lang="ko" className="h-full antialiased" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />

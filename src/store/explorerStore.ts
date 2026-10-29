@@ -136,9 +136,9 @@ function initialTheme(): Theme {
   return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
 }
 
-/** The inline script in the page head has already picked the language (link, saved choice, then browser) and set <html lang>. */
+/** The inline script in the page head has already picked the language (link, saved choice, then Korean) and set <html lang>. */
 function initialLocale(): Locale {
-  if (typeof document === "undefined") return "en";
+  if (typeof document === "undefined") return "ko";
   return document.documentElement.lang === "ko" ? "ko" : "en";
 }
 

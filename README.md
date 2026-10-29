@@ -25,7 +25,7 @@ Click any part to fly into it. The camera approaches the component you picked, t
 * **Find an amino acid**: type `G12`, `Lys48`, `61` or `glycine` and open it at Level III.
 * **Shareable links**: the address bar always describes the current view, and **Share** copies it.
 * **Dark mode**: follows the system setting until you choose; remembered per browser.
-* **English and 한국어**: one button switches the whole explorer, panels, labels, hover text and tour included; it follows the browser language until you choose.
+* **English and 한국어**: one button switches the whole explorer, panels, labels, hover text and tour included; Korean is the default until you choose another language.
 * **Numbered helices** in Scientific mode (α1 to α5 for KRAS), labels that keep clear of the panels, and a "More" cue when the info card scrolls.
 
 | Guided tour | Cancer hotspots | Dark mode | Find | 한국어 |
@@ -157,7 +157,7 @@ For example, `/?p=kras&l=4&r=12&a=CA` opens the α-carbon of KRAS Gly12, and `/?
 
 ### Languages
 
-The language is chosen in this order: a `lang=` link, then the choice saved in the browser, then the browser language (Korean if it starts with `ko`, otherwise English). A script in the page head sets `<html lang>` before first paint, so the page never flashes the wrong language, and Korean text uses Noto Sans KR next to Plus Jakarta Sans with word-based line breaking. Residue labels (Gly12), atom names (Cα), formulas, symbols and PDB IDs stay as they are in both languages; amino-acid search accepts English or Korean names (`lys`, `라이신`).
+The language is chosen in this order: a `lang=` link, then the choice saved in the browser, then Korean by default. A script in the page head sets `<html lang>` before first paint, so the page never flashes the wrong language, and Korean text uses Noto Sans KR next to Plus Jakarta Sans with word-based line breaking. Residue labels (Gly12), atom names (Cα), formulas, symbols and PDB IDs stay as they are in both languages; amino-acid search accepts English or Korean names (`lys`, `라이신`).
 
 How the text is organised:
 
